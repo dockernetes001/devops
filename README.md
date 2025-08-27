@@ -8,16 +8,16 @@ Este proyecto incluye:
 
 ## 1️⃣ Estructura del proyecto
 
-├── jenkins/ # Dockerfile de Jenkins con Node.js y Cypress
-├── servidor_nginx/ # Dockerfile de Nginx + SSH
-├── proyecto1/ # Código Vue para despliegue en web1
-├── proyecto2/ # Código Vue para despliegue en web2
-└── docker-compose.yml
+    - jenkins/ # Dockerfile de Jenkins con Node.js y Cypress
+    - servidor_nginx/ # Dockerfile de Nginx + SSH
+    - proyecto1/ # Código Vue para despliegue en web1
+    - proyecto2/ # Código Vue para despliegue en web2
+    - docker-compose.yml
 
 ## 2️⃣ Levantar los contenedores
 
 1. Construir y levantar todos los servicios:
-    
+
 ```bash
 docker-compose up -d --build
 ```
