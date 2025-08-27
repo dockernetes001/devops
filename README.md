@@ -51,3 +51,21 @@ ssh user@vue-nginx-2 "echo Conexión OK"
 ssh-keyscan -H vue-nginx-1 >> ~/.ssh/known_hosts
 ssh-keyscan -H vue-nginx-2 >> ~/.ssh/known_hosts
 ```
+
+## 4️⃣ Configurar Jenkins
+
+1. Instalar los plugins "SSH" en Jenkins.
+2. Mostrar en la terminal el id_rsa.pub:
+
+```bash
+cat /var/jenkins_home/.ssh/id_rsa.pub
+```
+
+3. Agregar Credenciales a Jenkins:
+
+- Ingresar a la interfaz de Jenkins.
+- Ir a "Administrar Jenkins" > "Credenciales" > "Agregar credenciales".
+- Tipo: "SSH Username with private key".
+- ID: "vue-nginx-1".
+- Username: "user".
+- Private Key: "Enter directly" y pegar el contenido de `/var/jenkins_home/.ssh/id_rsa`.
