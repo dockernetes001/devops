@@ -58,6 +58,8 @@ ssh-keyscan -H vue-nginx-2 >> ~/.ssh/known_hosts
 2. Mostrar en la terminal el id_rsa.pub:
 
 ```bash
+ssh-keygen -p -m PEM -f /var/jenkins_home/.ssh/id_rsa
+
 cat /var/jenkins_home/.ssh/id_rsa.pub
 ```
 
